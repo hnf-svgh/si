@@ -1,0 +1,42 @@
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Warna abu-abu soft */
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #87CEFA; /* Light sky blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #87CEFA; /* Light sky blue */
+    color: white;
+    transition: transform 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi halus */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek hover */
+    transform: translateY(-10px); /* Menggeser kartu sedikit ke atas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Warna gelap */
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

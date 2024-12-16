@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Parkir - Kampus</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f9;
+        }
+
+        header {
+            background-color: rgba(6, 26, 59, 0.8); /* Warna navy dengan transparansi */
+            color: rgb(255, 255, 255);
+            padding: 15px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffc107; /* Warna kuning saat hover */
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .auth-buttons .signup {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .auth-buttons .signup:hover {
+            background-color: #003d80;
+        }
+
+        .auth-buttons .signin {
+            background-color: transparent;
+            border: 2px solid #0056b3;
+            color: #0056b3;
+        }
+
+        .auth-buttons .signin:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .hero {
+            background-image: url('imagehero1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 40px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 51, 102, 0.6);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .features {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #e9f5ff;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .features-container {
+    display: flex; /* Mengatur Flexbox */
+    justify-content: space-between; /* Memberi jarak antar elemen */
+    gap: 20px; /* Jarak antar item */
+    flex-wrap: wrap; /* Menjaga responsif di layar kecil */
+}
+
+.feature-item {
+    flex: 1; /* Membuat kolom seimbang */
+    max-width: 30%; /* Lebar maksimal tiap kolom */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .feature-item {
+        max-width: 100%; /* Pada layar kecil, kolom akan menumpuk ke bawah */
+    }
+}
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e9f5ff;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px; /* Jarak antar gambar */
+    justify-content: center;
+    flex-wrap: wrap; /* Membuat item turun jika layar kecil */
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Lebar item galeri */
+    padding: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PARKIRAN FAKULTAS TEKNIK</h1>
+        <nav class="nav-links">
+            <a class="text-white" href="index.html">HOME</a>
+            <a class="text-white" href="available-parking.html">AREA PARKIR</a>
+            <a class="text-white" href="add-parking.html">INFORMASI PARKIR</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>PARKIR MAHASISWA TEKNIK</h1>
+            <p>Dikhususkan untuk anak teknik yang ingin mencari informasi terkait parkiran yang masih kosong</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Menyediakan Alternatif untuk Mencari Parkiran Kosong</h2>
+            <div class="features-container">
+                <div class="feature-item">
+                    <h4>Aman Terkendali</h4>
+                    <p>Parkiran di kampus kami mengutamakan keamanan dan kenyamanan pengguna. kami memastikan kendaraan Anda tetap aman terkendali selama Anda beraktivitas. Nikmati pengalaman parkir yang tenang, tanpa khawatir, di setiap sudut area parkir kami!</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Mempermudah Mahasiswa</h4>
+                    <p>Kami hadir untuk mempermudah mahasiswa dalam mencari tempat parkir yang nyaman dan strategis. Dengan sistem pencarian parkir yang efisien dan akses yang cepat, waktu Anda lebih optimal untuk fokus pada kegiatan perkuliahan.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Menghemat Waktu</h4>
+                    <p>Dengan sistem parkir yang terorganisir, Anda dapat menghemat waktu dalam menemukan tempat parkir yang tersedia. Tidak perlu lagi berputar-putar mencari lokasi, karena informasi langsung tersedia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="gallery">
+        <h2>Area Parkiran</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="Elektro.jpg" alt="Parkiran 1">
+                <p>Area Parkir Teknik Elektro</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Geofisika.jpg" alt="Parkiran 2">
+                <p>Area Parkir Samping Geofisika</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Tekim.jpg" alt="Parkiran 3">
+                <p>Area Parkir Teknik Kimia</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Perpus.jpg" alt="Parkiran 4">
+                <p>Area Parkir UPT Perpustakaan</p>
+            </div>
+            <div class="gallery-item">
+                <img src="mastek.jpg" alt="Parkiran 5">
+                <p>Area Parkir samping Mastek</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
