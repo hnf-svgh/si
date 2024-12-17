@@ -56,12 +56,25 @@
 
         /* Footer */
         footer {
-            background-color: rgba(red, green, blue, alpha); /* Warna navy */
+            background-color: rgba(0, 31, 84, 0.8); /* Warna navy */
             color: rgb(255, 255, 255);
             text-align: center;
             padding: 15px 0;
             font-size: 0.9rem;
-            margin-top: 20.5%;
+            margin-top: 20%;
+        }
+
+        .info-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            color: #00264d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .symbols img {
+            width: 100px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -77,10 +90,24 @@
             </nav>
         </header>
 
-        <!-- Main Content Kosong -->
+        <!-- Main Content -->
         <div class="container py-5 flex-grow-1">
             <h3 class="text-center text-white mb-5">Selamat Datang di Website Parkir Fakultas Teknik Universitas Lampung</h3>
-            <p class= "text-left text-white">Website ini dibuat untuk memberikan informasi parkiran Fakultas Teknik Universitas Lampung. Tujuan kami adalah memberikan kenyamanan dan kemudahan bagi seluruh civitas akademika Fakultas Teknik. Mari wujudkan pengalaman parkir yang lebih terorganisir dan terkendali bersama kami!</p>
+            <div class="info-content">
+                <p>Website ini dibuat untuk memberikan informasi terkait parkiran di Fakultas Teknik Universitas Lampung. 
+                   Kami menyediakan sistem informasi yang mudah diakses agar Anda dapat menemukan lokasi parkir dengan cepat dan efisien.</p>
+                <p><b>Ingat:</b> Parkir dengan tertib dan ikuti aturan yang telah ditetapkan untuk kenyamanan bersama!</p>
+                <ul>
+                    <li>Gunakan area parkir yang sudah disediakan.</li>
+                    <li>Jangan memarkir kendaraan di area terlarang.</li>
+                    <li>Pastikan kendaraan Anda terkunci dengan aman.</li>
+                </ul>
+            </div>
+            <div class="text-center mt-4 symbols">
+                <img src="noparking.jpg" alt="Larangan Parkir">
+                <img src="parkir.jpeg" alt="Parkir Tersedia">
+                <img src="parkirtersedia.webp" alt="Parkir Aman">
+            </div>
         </div>
     </div>
 

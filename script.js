@@ -1,8 +1,7 @@
 let parkingSpots = JSON.parse(localStorage.getItem('parkingSpots')) || [];
 let nextId = parkingSpots.length ? Math.max(...parkingSpots.map(spot => spot.id)) + 1 : 1;
 
-function addParkingSpot() {
-    // Mendapatkan nilai dari input
+function addParkingSpot()
     const spotNumber = document.getElementById('spotNumber').value;
     const spotName = document.getElementById('spotName').value;
 
